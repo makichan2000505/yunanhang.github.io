@@ -3,19 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>SilencePort | I think,Before I do</title>
+  <title>克隆数组 | SilencePort | I think,Before I do</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="undefined">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SilencePort">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="keywords" content="">
+  <meta name="description" content="1.浅表克隆1234567891011121314var person = new Person();var person.sex=&amp;quot;male&amp;quot;;var person.age=28;//创建一个新数组var oArray =[&amp;quot;tom&amp;quot;,person];var newArray = oArray.concat();//调用concat函数，返回一个新的数组对">
+<meta property="og:type" content="article">
+<meta property="og:title" content="克隆数组">
+<meta property="og:url" content="http://yoursite.com/2016/05/21/克隆数组/index.html">
 <meta property="og:site_name" content="SilencePort">
-<meta property="og:description">
+<meta property="og:description" content="1.浅表克隆1234567891011121314var person = new Person();var person.sex=&amp;quot;male&amp;quot;;var person.age=28;//创建一个新数组var oArray =[&amp;quot;tom&amp;quot;,person];var newArray = oArray.concat();//调用concat函数，返回一个新的数组对">
+<meta property="og:updated_time" content="2016-05-21T12:39:31.910Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SilencePort">
-<meta name="twitter:description">
+<meta name="twitter:title" content="克隆数组">
+<meta name="twitter:description" content="1.浅表克隆1234567891011121314var person = new Person();var person.sex=&amp;quot;male&amp;quot;;var person.age=28;//创建一个新数组var oArray =[&amp;quot;tom&amp;quot;,person];var newArray = oArray.concat();//调用concat函数，返回一个新的数组对">
   
     <link rel="alternative" href="/atom.xml" title="SilencePort" type="application/atom+xml">
   
@@ -27,7 +28,7 @@
 <body>
   <div id="loading" class="active"></div>
 
-  <nav id="menu"  >
+  <nav id="menu" class="hide" >
    <div class="inner">
   <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
       <i class="icon icon-lg icon-close"></i>
@@ -43,7 +44,7 @@
   </div>
   <ul class="nav">
     
-        <li class="waves-block waves-effect active">
+        <li class="waves-block waves-effect">
           <a href="/"  >
             <i class="icon icon-lg icon-home"></i>
             主页
@@ -104,7 +105,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">SilencePort</div>
+        <div class="flex-col header-title ellipsis">克隆数组</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -125,38 +126,71 @@
 </header>
 <header class="content-header">
   <div class="container">
-    <h1 class="author">SilencePort</h1>
-    <h5 class="subtitle">I think,Before I do</h5>
+    <h1 class="author">克隆数组</h1>
+    <h5 class="subtitle">2016-05-21</h5>
   </div>
 </header>
 
     <div class="container body-wrap">
       
-  <ul class="post-list">
-  
-    <li class="post-list-item">
   <article id="post-克隆数组" class="article article-type-post" itemprop="blogPost">
     
-      
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2016/05/21/克隆数组/">克隆数组</a>
-    </h3>
-  
-
-
-
       <div class="post-meat flex-row">
         <div class="flex-col"></div>
-        <time datetime="2016-05-21T12:33:44.000Z" itemprop="datePublished" class="post-tiem">
-  2016-05-21
-</time>
       </div>
-      <div class="post-content" id="post-content" itemprop="postContent" >
-        
-          <h2 id="1-浅表克隆"><a href="#1-浅表克隆" class="headerlink" title="1.浅表克隆"></a>1.浅表克隆</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var person = new Person();</span><br><span class="line">var person.sex=&quot;male&quot;;</span><br><span class="line">var person.age=28;</span><br><span class="line">//创建一个新数组</span><br><span class="line">var oArray =[&quot;tom&quot;,person];</span><br><span class="line">var newArray = oArray.concat();//调用concat函数，返回一个新的数组对象.同样也可用slice函数</span><br><span class="line">document.write(oArray[1].age);//28</span><br><span class="line">document.write(newArray[1].age);//28</span><br><span class="line">person.age = 29;</span><br><span class="line">document.write(oArray[1].age);//29</span><br><span class="line">document.write(newArray[1].age);//29</span><br><span class="line">oArray[1].age = 30;</span><br><span class="line">document.write(person.age);//30</span><br><span class="line">document.write(newArray[1].age);//30</span><br></pre></td></tr></table></figure>
+      <div class="post-body">
+
+        <aside class="post-widget" id="post-widget">
+
+          
+          <div class="post-share" id="post-share">
+    <div class="tit">分享到：</div>
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" href="javascript:;" data-title="微博" data-service="tsina">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns" href="javascript:;" data-title="微信" data-service="weixin">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" href="javascript:;" data-title=" QQ" data-service="cqq">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" href="javascript:;" data-title=" Facebook" data-service="fb">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" href="javascript:;" data-title=" Twitter" data-service="twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="douban share-sns" href="javascript:;" data-title="豆瓣" data-service="douban">
+          豆
+        </a>
+      </li>
+    </ul>
+ </div>
+
+          
+
+          
+          <nav class="post-toc-wrap" id="post-toc">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-浅表克隆"><span class="post-toc-text">1.浅表克隆</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-深度克隆"><span class="post-toc-text">2.深度克隆</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#深度克隆，不断进行索引，复制原始数组中的所有对象，从而使新数组不再和原始数组指向同一个引用"><span class="post-toc-text">深度克隆，不断进行索引，复制原始数组中的所有对象，从而使新数组不再和原始数组指向同一个引用</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#测试"><span class="post-toc-text">测试</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-深度克隆意义"><span class="post-toc-text">3.深度克隆意义</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#复制一个对象，改变原对象的属性，克隆的对象不受影响。例如在游戏引擎中，复制出一个模型，改变克隆出的模型的长宽高不会影响原模型的长宽高，这时就会用到深度克隆。"><span class="post-toc-text">复制一个对象，改变原对象的属性，克隆的对象不受影响。例如在游戏引擎中，复制出一个模型，改变克隆出的模型的长宽高不会影响原模型的长宽高，这时就会用到深度克隆。</span></a></li></ol></li></ol></li></ol>
+          </nav>
+          
+        </aside>
+
+        <div class="post-main">
+
+            <div class="post-content" id="post-content" itemprop="postContent"><h2 id="1-浅表克隆"><a href="#1-浅表克隆" class="headerlink" title="1.浅表克隆"></a>1.浅表克隆</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">var person = new Person();</span><br><span class="line">var person.sex=&quot;male&quot;;</span><br><span class="line">var person.age=28;</span><br><span class="line">//创建一个新数组</span><br><span class="line">var oArray =[&quot;tom&quot;,person];</span><br><span class="line">var newArray = oArray.concat();//调用concat函数，返回一个新的数组对象.同样也可用slice函数</span><br><span class="line">document.write(oArray[1].age);//28</span><br><span class="line">document.write(newArray[1].age);//28</span><br><span class="line">person.age = 29;</span><br><span class="line">document.write(oArray[1].age);//29</span><br><span class="line">document.write(newArray[1].age);//29</span><br><span class="line">oArray[1].age = 30;</span><br><span class="line">document.write(person.age);//30</span><br><span class="line">document.write(newArray[1].age);//30</span><br></pre></td></tr></table></figure>
 <p>浅表克隆操作的是同一个引用</p>
 <h2 id="2-深度克隆"><a href="#2-深度克隆" class="headerlink" title="2.深度克隆"></a>2.深度克隆</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">*@param _array 被克隆的数组</span><br><span class="line">*@param deep 定义是否深度克隆</span><br><span class="line">*@return Array 返回克隆的数组</span><br><span class="line">*@throws Error 参数数量不正确</span><br><span class="line">**/</span><br></pre></td></tr></table></figure>
 <h4 id="深度克隆，不断进行索引，复制原始数组中的所有对象，从而使新数组不再和原始数组指向同一个引用"><a href="#深度克隆，不断进行索引，复制原始数组中的所有对象，从而使新数组不再和原始数组指向同一个引用" class="headerlink" title="深度克隆，不断进行索引，复制原始数组中的所有对象，从而使新数组不再和原始数组指向同一个引用"></a>深度克隆，不断进行索引，复制原始数组中的所有对象，从而使新数组不再和原始数组指向同一个引用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line">function cloneArray(_array,deep)</span><br><span class="line">&#123;</span><br><span class="line">	//如果参数数量为1，为浅表克隆</span><br><span class="line">	if(arguments.length==1)</span><br><span class="line">	&#123;</span><br><span class="line">		var isdeep=false;</span><br><span class="line">	&#125;</span><br><span class="line">	//否则为深表克隆</span><br><span class="line">	else if&#123;</span><br><span class="line">		var isdeep = deep;</span><br><span class="line">			</span><br><span class="line">	&#125;</span><br><span class="line">	//否则抛出报错	</span><br><span class="line">	else&#123;</span><br><span class="line">		throw new Error(&quot;参数数量不正确&quot;);</span><br><span class="line">		return;</span><br><span class="line">	&#125;</span><br><span class="line">	//判断被克隆数组是否是数组对象，若是，返回[]，否则返回&#123;&#125;,并把返回值传给变量newArray</span><br><span class="line">	var newArray = _array instanceof Array?[]:&#123;&#125;;</span><br><span class="line">	</span><br><span class="line">	if(isdeep) /*如果是深度克隆*/</span><br><span class="line">	&#123;</span><br><span class="line">		//首先遍历该数组</span><br><span class="line">		for(var i in _array)</span><br><span class="line">		&#123;</span><br><span class="line">			var prop = _array[i];/*把数组里的元素指向变量prop*/</span><br><span class="line">			if(typeof prop ==&apos;object&apos;)/*如果该元素为对象*/</span><br><span class="line">			&#123;</span><br><span class="line">				if(prop instanceof Array)/*如果该元素为数组对象，也就是数组中的数组,就要用push函数*/</span><br><span class="line">				&#123;</span><br><span class="line">					var newArray[i] = [];/*创建数组newArray*/</span><br><span class="line">					for(var j = 0;j&lt;prop.length;j++)&#123;</span><br><span class="line">						if(typeof prop[j]!=&apos;object&apos;)/*for循环里再次判断该数组里的元素是否为对象*/</span><br><span class="line">						&#123;</span><br><span class="line">							newArray[i].push(prop[j]);/*如果不是对象了，就可以直接把元素push进newArray*/</span><br><span class="line">						&#125;</span><br><span class="line">						else</span><br><span class="line">						&#123;</span><br><span class="line">							newArray[i].push(cloneArray(prop[j],true));/*如果还是对象，那就再次调用cloneArray函数进行递归，处理该对象并push进newArray*/</span><br><span class="line">						&#125;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				else /*如果是不是数组对象，而是其他类型的对象，不用push*/</span><br><span class="line">				&#123;</span><br><span class="line">					newArray[i] = cloneArray(prop.true);</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">			&#125;</span><br><span class="line">			else /*如果该元素不是对象*/</span><br><span class="line">			&#123;</span><br><span class="line">				newArray[i] = prop;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	else /*如果不是深度克隆*/</span><br><span class="line">	&#123;</span><br><span class="line">		newArray = _array.concat();</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	return newArray;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -164,21 +198,44 @@
 <li><h3 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//创建一个复杂数据类型作为数组元素</span><br><span class="line">var person = new Object();</span><br><span class="line">person.sex = &quot;male&quot;</span><br><span class="line">person.age = 28;</span><br><span class="line">var oArray =[&quot;jack&quot;,person];</span><br><span class="line"></span><br><span class="line">//克隆</span><br><span class="line">var newArray = cloneArray(oArray,true);</span><br><span class="line"></span><br><span class="line">document.write(oArray[1].age);/*28*/</span><br><span class="line">document.write(newArray[1].age);/*28*/</span><br><span class="line">//改变指向的对象</span><br><span class="line">person.age = 27;</span><br><span class="line">document.write(oArray[1].age);/*27*/</span><br><span class="line">document.write(newArray[1].age);/*28*/</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h2 id="3-深度克隆意义"><a href="#3-深度克隆意义" class="headerlink" title="3.深度克隆意义"></a>3.深度克隆意义</h2><h4 id="复制一个对象，改变原对象的属性，克隆的对象不受影响。例如在游戏引擎中，复制出一个模型，改变克隆出的模型的长宽高不会影响原模型的长宽高，这时就会用到深度克隆。"><a href="#复制一个对象，改变原对象的属性，克隆的对象不受影响。例如在游戏引擎中，复制出一个模型，改变克隆出的模型的长宽高不会影响原模型的长宽高，这时就会用到深度克隆。" class="headerlink" title="复制一个对象，改变原对象的属性，克隆的对象不受影响。例如在游戏引擎中，复制出一个模型，改变克隆出的模型的长宽高不会影响原模型的长宽高，这时就会用到深度克隆。"></a>复制一个对象，改变原对象的属性，克隆的对象不受影响。例如在游戏引擎中，复制出一个模型，改变克隆出的模型的长宽高不会影响原模型的长宽高，这时就会用到深度克隆。</h4>
-        
+<h2 id="3-深度克隆意义"><a href="#3-深度克隆意义" class="headerlink" title="3.深度克隆意义"></a>3.深度克隆意义</h2><h4 id="复制一个对象，改变原对象的属性，克隆的对象不受影响。例如在游戏引擎中，复制出一个模型，改变克隆出的模型的长宽高不会影响原模型的长宽高，这时就会用到深度克隆。"><a href="#复制一个对象，改变原对象的属性，克隆的对象不受影响。例如在游戏引擎中，复制出一个模型，改变克隆出的模型的长宽高不会影响原模型的长宽高，这时就会用到深度克隆。" class="headerlink" title="复制一个对象，改变原对象的属性，克隆的对象不受影响。例如在游戏引擎中，复制出一个模型，改变克隆出的模型的长宽高不会影响原模型的长宽高，这时就会用到深度克隆。"></a>复制一个对象，改变原对象的属性，克隆的对象不受影响。例如在游戏引擎中，复制出一个模型，改变克隆出的模型的长宽高不会影响原模型的长宽高，这时就会用到深度克隆。</h4></div>
+
+            
+
+
+            
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="克隆数组" data-title="克隆数组" data-url="http://yoursite.com/2016/05/21/克隆数组/index.html"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"ysblog"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+
+
+        </div>
+
       </div>
-      <div class="post-footer clearfix">
-        <a href="/2016/05/21/克隆数组/" class="post-more waves-effect waves-button waves-light">MORE</a>
-      </div>
+
     
 
   </article>
 
-
-</li>
-  
-  </ul>
-  
 
 
     </div>
@@ -188,10 +245,10 @@
 
 <script>
 var BLOG_SHARE = {
-    title: "SilencePort",
+    title: "克隆数组",
     pic: "/img/logo.jpg",
     summary: document.getElementsByName('summary')[0].content,
-    url: "http://yoursite.com/index.html"
+    url: "http://yoursite.com/2016/05/21/克隆数组/index.html"
 };
 </script>
 <div class="global-share" id="global-share">
