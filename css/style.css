@@ -688,7 +688,7 @@ a.waves-effect .waves-ripple {
   z-index: 66;
   width: 240px;
   min-height: 100%;
-  background: #fff;
+  background: #ffffff;
   will-change: left;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   -webkit-transition: 0.4s ease-in-out;
@@ -732,7 +732,7 @@ a.waves-effect .waves-ripple {
 #menu .mail {
   display: inline-block;
   padding-top: 4px;
-  color: #98bccc;
+  color: #ffffff;
   font-size: 13px;
 }
 #menu .social {
