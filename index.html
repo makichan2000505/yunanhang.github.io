@@ -135,6 +135,80 @@
   <ul class="post-list">
   
     <li class="post-list-item">
+  <article id="post-EJS搭建一个静态网页" class="article article-type-post" itemprop="blogPost">
+    
+      
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/2016/05/29/EJS搭建一个静态网页/">EJS搭建一个静态网页</a>
+    </h3>
+  
+
+
+
+      <div class="post-meat flex-row">
+        <div class="flex-col"></div>
+        <time datetime="2016-05-29T09:44:56.000Z" itemprop="datePublished" class="post-tiem">
+  2016-05-29
+</time>
+      </div>
+      <div class="post-content" id="post-content" itemprop="postContent" >
+        
+          <h1 id="使用express-ejs搭建一个网站实例过程"><a href="#使用express-ejs搭建一个网站实例过程" class="headerlink" title="使用express+ejs搭建一个网站实例过程"></a>使用express+ejs搭建一个网站实例过程</h1><h2 id="1-创建项目文件夹works"><a href="#1-创建项目文件夹works" class="headerlink" title="1.创建项目文件夹works"></a>1.创建项目文件夹works</h2><ul>
+<li><p>安装express+ejs</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ express -e</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>安装依赖包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="安装完成后目录结构如下："><a href="#安装完成后目录结构如下：" class="headerlink" title="安装完成后目录结构如下："></a>安装完成后目录结构如下：</h4><p><img src="http://7xu97y.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160529164714.png" alt="image"></p>
+<ul>
+<li><p>打开views文件夹，在里面新建两个文件夹，一个名为patials，用来存放页面的各个模块。另一个为pages，用来引入patials里的模块。</p>
+</li>
+<li><p>在patials里新建head.ejs,header.ejs,foot.ejs。写些简单的HTML代码。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//head.ejs</span><br><span class="line"></span><br><span class="line">&lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">&lt;title&gt;head&lt;/title&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; href=&quot;//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css&quot;&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">    body    &#123; padding-top:50px; &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">//header.ejs</span><br><span class="line">&lt;nav class=&quot;navbar navbar-default&quot; role=&quot;navigation&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;container-fluid&quot;&gt;</span><br><span class="line"></span><br><span class="line">        &lt;div class=&quot;navbar-header&quot;&gt;</span><br><span class="line">            &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;</span><br><span class="line">                &lt;span class=&quot;glyphicon glyphicon glyphicon-tree-deciduous&quot;&gt;&lt;/span&gt;</span><br><span class="line">                使用express+ejs搭建一个网站实例过程</span><br><span class="line">            &lt;/a&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">        &lt;ul class=&quot;nav navbar-nav&quot;&gt;</span><br><span class="line">            &lt;li&gt;&lt;a href=&quot;/&quot;&gt;首页&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">            &lt;li&gt;&lt;a href=&quot;/about&quot;&gt;关于&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">        &lt;/ul&gt;</span><br><span class="line">      </span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/nav&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//footer.ejs</span><br><span class="line">&lt;p class=&quot;text-center text-muted&quot;&gt;@ Copyright 2016 SilencePort&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>接着在pages文件夹里创建index.ejs用来显示首页,about.ejs来显示”关于”页面.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">//index.ejs</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;% include ../partials/head %&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body class=&quot;container&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;header&gt;</span><br><span class="line">        &lt;% include ../partials/header %&gt;</span><br><span class="line">    &lt;/header&gt;</span><br><span class="line"></span><br><span class="line">    &lt;main&gt;</span><br><span class="line">        &lt;div class=&quot;jumbotron&quot;&gt;</span><br><span class="line">            &lt;h1&gt;湖北工业大学&lt;/h1&gt;</span><br><span class="line">            &lt;p&gt;欢迎进入计算机学院&lt;/p&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">	&lt;h2&gt;软件二班&lt;/h2&gt;</span><br><span class="line">	&lt;p&gt;&lt;%= tagline %&gt;&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">        &lt;h2&gt;好基友&lt;/h2&gt;</span><br><span class="line">        &lt;ul&gt;</span><br><span class="line">           &lt;% guys.forEach(function(guy) &#123; %&gt;</span><br><span class="line">                &lt;li&gt;&lt;%= guy.name %&gt; - &lt;%= guy.age %&gt;&lt;/li&gt;</span><br><span class="line">           &lt;% &#125;);%&gt;</span><br><span class="line">        &lt;/ul&gt;</span><br><span class="line"></span><br><span class="line">    &lt;/main&gt;</span><br><span class="line"></span><br><span class="line">    &lt;footer&gt;</span><br><span class="line">        &lt;% include ../partials/footer %&gt;</span><br><span class="line">    &lt;/footer&gt;</span><br><span class="line">    </span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">//about.ejs</span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;% include ../partials/head %&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body class=&quot;container&quot;&gt;</span><br><span class="line"></span><br><span class="line">    &lt;header&gt;</span><br><span class="line">        &lt;% include ../partials/header %&gt;</span><br><span class="line">    &lt;/header&gt;</span><br><span class="line"></span><br><span class="line">    &lt;main&gt;</span><br><span class="line">        &lt;div class=&quot;row&quot;&gt;</span><br><span class="line">            &lt;div class=&quot;col-sm-8&quot;&gt;</span><br><span class="line">            </span><br><span class="line">                &lt;div class=&quot;jumbotron&quot;&gt;</span><br><span class="line">                    &lt;h1&gt;西区18栋&lt;/h1&gt;</span><br><span class="line">                    &lt;p&gt;欢迎来到512&lt;/p&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line">                </span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">            &lt;div class=&quot;col-sm-4&quot;&gt;</span><br><span class="line">                </span><br><span class="line">                &lt;div class=&quot;well&quot;&gt;</span><br><span class="line">                    &lt;h3&gt;敌军还有30秒到达战场，碾碎他们!&lt;/h3&gt;</span><br><span class="line">                &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/main&gt;</span><br><span class="line"></span><br><span class="line">    &lt;footer&gt;</span><br><span class="line">        &lt;% include ../partials/footer %&gt;</span><br><span class="line">    &lt;/footer&gt;</span><br><span class="line">    </span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>在app.js里添加渲染函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">//渲染页面about</span><br><span class="line">app.get(&apos;/about&apos;, function (req, res) &#123;</span><br><span class="line">    res.render(&apos;pages/about&apos;);</span><br><span class="line">&#125;);</span><br><span class="line">//获取数据到index</span><br><span class="line">app.get(&apos;/&apos;, function (req, res) &#123;</span><br><span class="line">    var guys = [</span><br><span class="line">        &#123; name: &apos;喻南航&apos;, age: 22 &#125;,</span><br><span class="line">        &#123; name: &apos;李玉明&apos;, age: 23 &#125;,</span><br><span class="line">        &#123; name: &apos;徐冬冬&apos;, age: 21 &#125;</span><br><span class="line">    ];</span><br><span class="line">    var tagline = &quot;一入联盟深似海，从此代码是路人&quot;;</span><br><span class="line"></span><br><span class="line">    res.render(&apos;pages/index&apos;, &#123;</span><br><span class="line">        guys: guys,</span><br><span class="line">        tagline: tagline</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">//设置端口</span><br><span class="line">app.listen(8080);</span><br><span class="line">console.log(&apos;http://localhost:8080 is running&apos;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>运行app.js，浏览器输入<a href="http://localhost:8080" target="_blank" rel="external">http://localhost:8080</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node app.js</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="进入网页发现中文显示乱码"><a href="#进入网页发现中文显示乱码" class="headerlink" title="进入网页发现中文显示乱码"></a>进入网页发现中文显示乱码</h3><p><img src="http://7xu97y.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160529173555.png" alt="image"><br> ++这是由于express生成的app.js的默认编码不是utf-8造成的++</p>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><ul>
+<li>将app.js 及所有ejs文件用记事本打开，然后另存为UTF-8格式<br><img src="http://7xu97y.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160529173611.png" alt="image"></li>
+<li>再次运行<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node app.js</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h3 id="这次页面中文正常显示了"><a href="#这次页面中文正常显示了" class="headerlink" title="这次页面中文正常显示了"></a>这次页面中文正常显示了</h3><p><img src="http://7xu97y.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160529173714.png" alt="image"><br><img src="http://7xu97y.com1.z0.glb.clouddn.com/QQ%E6%88%AA%E5%9B%BE20160529173720.png" alt="image"></p>
+<h2 id="学习心得"><a href="#学习心得" class="headerlink" title="学习心得"></a>学习心得</h2><p>自从买了VPN后，都用google在找教程，不得不承认国外程序员写文章，思路比国人要清晰得多，这点值得我们学习。</p>
+
+        
+      </div>
+      <div class="post-footer clearfix">
+        <a href="/2016/05/29/EJS搭建一个静态网页/" class="post-more waves-effect waves-button waves-light">MORE</a>
+      </div>
+    
+
+  </article>
+
+
+</li>
+  
+    <li class="post-list-item">
   <article id="post-测试图片显示" class="article article-type-post" itemprop="blogPost">
     
       
